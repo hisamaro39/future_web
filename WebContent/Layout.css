@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.left_wrap {
+        float: left;
+        margin-left: 0px;
+}
+
+.right_wrap {
+        float: right;
+        margin-right: 300px;
+    }
