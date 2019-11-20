@@ -51,7 +51,20 @@ public class BushoServlet extends HttpServlet {
 		if(action.equals("save")) {
 			String busho_id = request.getParameter("busho_id");
 			String busho_name = request.getParameter("busho_name");
+			String post_code = request.getParameter("post_code");
+			String entry = request.getParameter("entry");
+			String retire = request.getParameter("retire");
 			System.out.println("部署ID：" + busho_id + "部署名：" + busho_name + "を登録しました" );
+			System.out.println("post_code="+post_code);
+			System.out.println("entry=" + entry);
+			System.out.println("retire=" + retire);
+			if(Util.is_post_code(post_code)) System.out.println("郵便番号です");
+			else System.out.println("郵便番号ではありません");
+			if(Util.is_date(entry)) System.out.println("日付です");
+			else System.out.println("日付ではありません");
+			if(Util.correct_entry_retire(entry, retire))
+				System.out.println("退社日は入社日以降です");
+			else System.out.println("おかしいです");
 			dispatcher = request.getRequestDispatcher("WEB-INF/success_busho_save.jsp");
 		}
 		if(action.equals("edit")) {

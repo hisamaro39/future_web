@@ -33,6 +33,12 @@ BushoInfo busho_info = (BushoInfo) request.getAttribute("busho_info");
 <input type="text" name="busho_id"><br>
 部署名:
 <input type="text" name="busho_name"><br>
+郵便番号:
+<input type="text" name="post_code"><br>
+入社日:
+<input type="text" name="entry"><br>
+退社日:
+<input type="text" name="retire"><br>
 <input type="submit" value="保存">
 </form>
 </div>
